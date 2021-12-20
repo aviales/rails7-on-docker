@@ -3,7 +3,9 @@ FROM ruby:3.0.3-slim-bullseye
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     libpq-dev \
-    postgresql-client \
+    postgresql-client \ 
+    git \
+    imagemagick \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 WORKDIR /usr/src/app
